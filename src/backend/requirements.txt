@@ -38,7 +38,7 @@ azure-monitor-opentelemetry==1.6.3
     # via fastapi-app (pyproject.toml)
 azure-monitor-opentelemetry-exporter==1.0.0b32
     # via azure-monitor-opentelemetry
-certifi==2024.8.30
+certifi==2025.1.31
     # via
     #   httpcore
     #   httpx
