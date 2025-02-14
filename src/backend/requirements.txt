@@ -178,7 +178,7 @@ opentelemetry-instrumentation-sqlalchemy==0.48b0
     # via fastapi-app (pyproject.toml)
 opentelemetry-instrumentation-urllib==0.48b0
     # via azure-monitor-opentelemetry
-opentelemetry-instrumentation-urllib3==0.48b0
+opentelemetry-instrumentation-urllib3==0.51b0
     # via azure-monitor-opentelemetry
 opentelemetry-instrumentation-wsgi==0.48b0
     # via
