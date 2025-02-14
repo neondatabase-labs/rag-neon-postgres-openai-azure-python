@@ -39,9 +39,20 @@ This project is designed for deployment on **Azure**, hosting:
 
 ## Architecture diagram
 
-The deployed app uses a user-assigned managed identity to authenticate to Azure services, and stores logs in Log Analytics.
 
-![Architecture diagram: Azure Container Apps, Azure Container Registry, Managed Identity, Azure OpenAI, Azure Database for PostgreSQL](docs/images/azure_architecture.png)
+![Architecture diagram: Azure Container Apps, Azure Container Registry, Managed Identity, Azure OpenAI, Neon Serverless Postgres](docs/images/rag-neon-azure-architecture-diagram.png)
+
+## Azure Resources Used
+
+| Service                     | Purpose                                      |
+|-----------------------------|----------------------------------------------|
+| **Neon Serverless Postgres**| Stores and queries structured data           |
+| **Azure OpenAI**            | Embedding and chat models for RAG            |
+| **Azure Container Apps**    | Deploys the API backend and frontend         |
+| **Azure Container Registry**     | Stores and manages containerized images for frontend and backend        |
+| **Azure Developer CLI**     | Automates deployment and resource management |
+| **Azure Log Analytics**     | Monitors application logs and metrics        |
+
 
 ## Getting started
 
