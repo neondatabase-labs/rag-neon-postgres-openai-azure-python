@@ -4,44 +4,26 @@ param tags object = {}
 
 resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = {
   location: location
-  name: name
+  name: 'neon-${name}'
   tags: tags
   properties: {
     companyDetails: {
-      businessPhone: 'string'
-      companyName: 'string'
-      country: 'string'
-      domain: 'string'
     }
     marketplaceDetails: {
       offerDetails: {
-        offerId: 'string'
-        planId: 'string'
-        planName: 'string'
-        publisherId: 'string'
-        termId: 'string'
-        termUnit: 'string'
+        offerId: 'neon_serverless_postgres_azure_prod'
+        planId: 'neon_serverless_postgres_azure_prod_free'
+        planName: 'Free Plan'
+        publisherId: 'neon1722366567200'
+        termId: 'P1M'
+        termUnit: 'gmz7xq9ge3py'
       }
       subscriptionId: subscription().id
-      subscriptionStatus: 'string'
     }
     partnerOrganizationProperties: {
-      organizationId: 'string'
       organizationName: 'string'
-      singleSignOnProperties: {
-        aadDomains: [
-          'string'
-        ]
-        enterpriseAppId: 'string'
-        singleSignOnState: 'string'
-        singleSignOnUrl: 'string'
-      }
     }
     userDetails: {
-      emailAddress: 'string'
-      firstName: 'string'
-      lastName: 'string'
-      phoneNumber: 'string'
       upn: 'string'
     }
   }
