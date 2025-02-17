@@ -169,10 +169,10 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   tags: tags
 }
 
-var neonServerlessPostgresName = '${prefix}-neon'
+var neonServerlessPostgresName = '${prefix}-db'
 
 module neonPostgres 'core/database/neon/serverlessPostgres.bicep' = {
-  name: 'postgresql'
+  name: 'neon-serverless-postgres'
   scope: resourceGroup
   params: {
     name: neonServerlessPostgresName

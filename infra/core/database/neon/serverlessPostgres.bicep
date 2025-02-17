@@ -15,8 +15,8 @@ resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = {
         planId: 'neon_serverless_postgres_azure_prod_free'
         planName: 'Free Plan'
         publisherId: 'neon1722366567200'
-        termId: 'P1M'
-        termUnit: 'gmz7xq9ge3py'
+        termId: 'gmz7xq9ge3py'
+        termUnit: 'P1M'
       }
       subscriptionId: subscription().id
     }

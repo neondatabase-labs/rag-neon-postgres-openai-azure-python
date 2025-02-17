@@ -160,7 +160,7 @@ Once you've opened the project in [Codespaces](#github-codespaces), [Dev Contain
 ### Setting up the environment file
 
 1. Obtain Neon Database Credentials
-   - From Azure portal, find the Neon Serverless Postgres Organization service and click on Portal URL.
+   - From [Azure portal](https://portal.azure.com/), find the Neon Serverless Postgres Organization service and click on Portal URL.
    - This brings you to the **[Neon Console](https://console.neon.tech/)** 
    - Click “New Project”
    - Choose an Azure region
