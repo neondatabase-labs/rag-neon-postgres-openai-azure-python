@@ -3,7 +3,7 @@
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/neondatabase-labs/rag-neon-postgres-openai-azure-python)
 [![Open in Dev Containers](https://img.shields.io/static/v1?style=for-the-badge&label=Dev%20Containers&message=Open&color=blue&logo=visualstudiocode)](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/neondatabase-labs/rag-neon-postgres-openai-azure-python)
 
-This project creates a web-based chat application with an API backend that leverages OpenAI chat models to answer questions using [Neon Serverless Postgres](https://neon.tech/). The frontend is built with React and FluentUI, while the backend is written in Python (FastAPI).
+This project creates a web-based chat application with an API backend that leverages OpenAI chat models to answer questions using [Neon Serverless Postgres](https://neon.tech/?refcode=44WD03UH). The frontend is built with React and FluentUI, while the backend is written in Python (FastAPI).
 
 This project is designed for deployment on **Azure**, hosting:
 - The app in **Azure Container Apps**
@@ -161,7 +161,7 @@ Once you've opened the project in [Codespaces](#github-codespaces), [Dev Contain
 
 1. Obtain Neon Database Credentials
    - From [Azure portal](https://portal.azure.com/), find the Neon Serverless Postgres Organization service and click on Portal URL.
-   - This brings you to the **[Neon Console](https://console.neon.tech/)** 
+   - This brings you to the **[Neon Console](https://console.neon.tech/?refcode=44WD03UH)** 
    - Click “New Project”
    - Choose an Azure region
    - Give your project a name (e.g., “Neon RAG Python”)
