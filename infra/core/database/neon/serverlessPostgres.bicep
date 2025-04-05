@@ -22,7 +22,7 @@ resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = {
       subscriptionId: subscription().id
     }
     partnerOrganizationProperties: {
-      organizationName: 'string'
+      organizationName: 'mycompany'
     }
     userDetails: {
       upn: userPrincipalName
