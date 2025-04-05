@@ -108,8 +108,16 @@ A related option is VS Code Dev Containers, which will open the project in your 
     python3 -m venv .venv
     ```
     
+    For Mac OS
+
     ```bash
     source .venv/bin/activate
+    ```
+
+    For Windows
+
+    ```bash
+    .\.venv\Scripts\activate
     ```
 
 4. Install required Python packages and backend application:
