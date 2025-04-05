@@ -1,6 +1,7 @@
 param name string
 param location string = resourceGroup().location
 param tags object = {}
+param userPrincipalName string
 
 resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = {
   location: location
@@ -24,7 +25,7 @@ resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = {
       organizationName: 'string'
     }
     userDetails: {
-      upn: 'string'
+      upn: userPrincipalName
     }
   }
 }

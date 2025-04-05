@@ -155,6 +155,8 @@ param neonServerlessPostgresPassword string // Set in main.parameters.json
 
 @description('Neon Serverless Postgres Database')
 param neonServerlessPostgresDatabase string // Set in main.parameters.json
+@description('Enter your Azure user principal name (e.g. jane.doe@contoso.com)')
+param userPrincipalName string
 
 
 param webAppExists bool = false
@@ -178,6 +180,7 @@ module neonPostgres 'core/database/neon/serverlessPostgres.bicep' = {
     name: neonServerlessPostgresName
     location: location
     tags: tags
+    userPrincipalName: userPrincipalName
   }
 }
 

@@ -161,7 +161,7 @@ Once you've opened the project in [Codespaces](#github-codespaces), [Dev Contain
     azd up
     ```
 
-    You will be asked to select two locations, first a region for most of the resources, then a region specifically for the Azure OpenAI models. This project uses the gpt-4o-mini and text-embedding-ada-002 models which may not be available in all Azure regions. Check for [up-to-date region availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#standard-deployment-model-availability) and select a region accordingly.
+    You will be asked to enter your `userPrincipalName` like your email address (e.g. jane.doe@contoso.com), select two locations, first a region for most of the resources, then a region specifically for the Azure OpenAI models. This project uses the gpt-4o-mini and text-embedding-ada-002 models which may not be available in all Azure regions. Check for [up-to-date region availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#standard-deployment-model-availability) and select a region accordingly.
 
 5. Set Neon database credentials to Azure environment and redeploy
 
