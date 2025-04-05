@@ -163,7 +163,7 @@ Once you've opened the project in [Codespaces](#github-codespaces), [Dev Contain
 
     You will be asked to enter your `userPrincipalName` like your email address (e.g. jane.doe@contoso.com), select two locations, first a region for most of the resources, then a region specifically for the Azure OpenAI models. This project uses the gpt-4o-mini and text-embedding-ada-002 models which may not be available in all Azure regions. Check for [up-to-date region availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#standard-deployment-model-availability) and select a region accordingly.
 
-5. Obtain Neon database credentials and set
+5. Get Neon database credentials and set Azure environment values
 
     Currently, Neon does not support managed identity and automatically assigning database credentials during the deployment. After the first deployment, you need to retrieve  credentials manually from the Neon Console and set environment variable values
 
