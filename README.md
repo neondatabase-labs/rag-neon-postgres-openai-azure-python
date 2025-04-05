@@ -155,6 +155,39 @@ Once you've opened the project in [Codespaces](#github-codespaces), [Dev Contain
 
     You will be asked to select two locations, first a region for most of the resources, then a region specifically for the Azure OpenAI models. This project uses the gpt-4o-mini and text-embedding-ada-002 models which may not be available in all Azure regions. Check for [up-to-date region availability](https://learn.microsoft.com/azure/ai-services/openai/concepts/models#standard-deployment-model-availability) and select a region accordingly.
 
+5. Set Neon database credentials to Azure environment and redeploy
+
+    Currently, Neon does not support managed identity and automatically assigning database credentials during the deployment. After the first deployment, you need to retrieve  credentials manually from the Neon Console and set environment variable values
+
+    1. Obtain Neon Database Credentials
+       - From [Azure portal](https://portal.azure.com/), find the Neon Serverless Postgres Organization service and click on Portal URL.
+       - This brings you to the **[Neon Console](https://console.neon.tech/?refcode=44WD03UH)** 
+       - Click “New Project”
+       - Choose an Azure region
+       - Give your project a name (e.g., “Neon RAG Python”)
+       - Click “Create Project”
+       - Once the project is created successfully, copy the Neon connection string. You can find the connection details in the Connection Details widget on the Neon Dashboard.
+
+       ```ini
+       postgresql://[user]:[password]@[neon_hostname]/[dbname]?sslmode=require
+       ```
+
+    2. Set environment variable values for NeonDB
+
+       Use the following commands to set your credentials:
+
+       ```ini
+       azd env set POSTGRES_HOST [neon_hostname]
+       azd env set POSTGRES_USERNAME [user]
+       azd env set POSTGRES_PASSWORD [password]
+       azd env set POSTGRES_DATABASE [dbname]
+       azd env set POSTGRES_SSL require
+       ```
+
+       After this, redeploy your app, and it will be connected to the Neon database.
+
+    3. Run `azd deploy` to update these values in the Azure Container App
+
 ## Local Development
 
 ### Setting up the environment file
