@@ -23,6 +23,9 @@
       "deployAzureOpenAI": {
         "value": "${DEPLOY_AZURE_OPENAI=true}"
       },
+      "deployNeonServerlessPostgres": {
+        "value": "${DEPLOY_NEON_SERVERLESS_POSTGRES=true}"
+      },
       "azureOpenAIKey": {
         "value": "${AZURE_OPENAI_KEY}"
       },

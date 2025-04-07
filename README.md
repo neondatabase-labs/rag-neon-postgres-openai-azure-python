@@ -190,11 +190,12 @@ Once you've opened the project in [Codespaces](#github-codespaces), [Dev Contain
        azd env set POSTGRES_PASSWORD [password]
        azd env set POSTGRES_DATABASE [dbname]
        azd env set POSTGRES_SSL require
+       azd env set DEPLOY_NEON_SERVERLESS_POSTGRES false
        ```
 
        After this, redeploy your app, and it will be connected to the Neon database.
 
-    3. Run `azd deploy` to update these values in the Azure Container App
+    3. Run `azd provision` to update these values in the Azure Container App
 
    
 6. Connect to NeonDB and populate sample data.

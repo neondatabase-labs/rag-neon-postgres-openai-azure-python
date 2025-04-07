@@ -3,12 +3,9 @@ param location string = resourceGroup().location
 param tags object = {}
 param userPrincipalName string
 
-var neonDatabaseName = 'neon-${name}'
-var shouldCreateNeon = empty(neonDatabaseName)
-
-resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = if (shouldCreateNeon) {
+resource neonOrganization 'Neon.Postgres/organizations@2024-08-01-preview' = {
   location: location
-  name: neonDatabaseName
+  name: name
   tags: tags
   properties: {
     companyDetails: {

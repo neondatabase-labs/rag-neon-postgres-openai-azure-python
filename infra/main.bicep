@@ -56,6 +56,9 @@ param openAIResourceGroupName string = ''
 @description('Whether to deploy Azure OpenAI resources')
 param deployAzureOpenAI bool = true
 
+@description('Whether to deploy Neon Serverless Postgres resource')
+param deployNeonServerlessPostgres bool = true
+
 @allowed([
   'azure'
   'openaicom'
@@ -173,7 +176,7 @@ resource resourceGroup 'Microsoft.Resources/resourceGroups@2021-04-01' = {
 
 var neonServerlessPostgresName = '${prefix}-db'
 
-module neonPostgres 'core/database/neon/serverlessPostgres.bicep' = {
+module neonPostgres 'core/database/neon/serverlessPostgres.bicep' = if (deployNeonServerlessPostgres) {
   name: 'neon-serverless-postgres'
   scope: resourceGroup
   params: {
