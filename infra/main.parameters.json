@@ -93,16 +93,16 @@
         "value": "${OPENAICOM_KEY}"
       },
       "neonServerlessPostgresHost": {
-        "value": "${POSTGRES_HOST}"
+        "value": "${POSTGRES_HOST=neon-host}"
       },
       "neonServerlessPostgresUserName": {
-        "value": "${POSTGRES_USERNAME}"
+        "value": "${POSTGRES_USERNAME=neondb_owner}"
       },
       "neonServerlessPostgresPassword": {
-        "value": "${POSTGRES_PASSWORD}"
+        "value": "${POSTGRES_PASSWORD=neondb_password}"
       },
       "neonServerlessPostgresDatabase": {
-        "value": "${POSTGRES_DATABASE}"
+        "value": "${POSTGRES_DATABASE=neondb}"
       }
     }
 }
